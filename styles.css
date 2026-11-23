@@ -1,0 +1,600 @@
+* {
+    /* spacing and layout */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* color */
+    background-color:#000000;
+    color: whitesmoke;
+
+    /* typography */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* display */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER STYLING */
+header {
+    /* color */
+    background-color: #000000;
+
+    /* spacing */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-block: clamp(0.75rem, 1.5vw, 1.25rem);
+    /* padding-inline: clamp(1rem, 5vw, 4rem); */
+    padding-left: 17rem;
+    padding-right: 19rem;
+
+    /* layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+/* HEADER STYLING */
+.logo img {
+    /* spacing */
+    width: auto;
+    height: 55px;
+
+    /* display */
+    display: block;
+}
+
+/* HEADER STYLING */
+.navigation a {
+    /* color */
+    color: gold;
+
+    /* typography */
+    font-size: 20px;
+    text-decoration: none;
+    /* font-weight: 500px; */
+
+    /* spacing */
+    position: relative;
+    margin-left: 22px;
+    
+    transition: color 0.3s ease;
+}
+
+/* HEADER STYLING */
+.navigation a::after {
+    /* color */
+    background: whitesmoke;
+    
+    /* spacing */
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    
+    /* display */
+    border-radius: 5px;
+    content: '';
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+/* HEADER STYLING */
+.navigation a:hover::after {
+    /* display */
+    transform: scaleX(1);
+}
+
+/* CONTENT STYLING */
+main {
+    /* spacing */
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+    padding-inline: clamp(1rem, 0.25rem + 3.75vw, 3rem);
+
+    /* display */
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    gap: 5rem;
+}
+
+/* CONTENT STYLING */
+.home_page_main {
+    /* spacing */
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    /* layout */
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* CONTENT STYLING */
+.opener_intro {
+    font-size: 39px;
+}
+
+/* CONTENT STYLING */
+.opener_intro_BAGUIO {
+    /* typhography */
+    font-weight: bold;
+    color: gold;
+}
+
+/* CONTENT STYLING */
+.opener_intro p {
+    /* typography */
+    font-size: 30px;
+}
+
+/* CONTENT STYLING */
+.opener_intro .opener_tagline {
+    /* color */
+    color: goldenrod;
+
+    /* typography */
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    /* spacing */
+    margin-bottom: 0.5rem;
+
+    /* display */
+    text-shadow: 0 0 10px rgb(188, 183, 28);
+}
+
+/* CONTENT STYLING */
+.opener_intro .opener_intro_content {
+    /* color */
+    color: rgba(245, 245, 245, 0.79);
+
+    /* typography */
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 1.6;
+
+    /* spacing */
+    margin-top: 0.75rem;
+}
+
+/* CONTENT STYLING */
+.home_buttons {
+    /* spacing */
+    align-items: center;
+    margin-top: 1.5rem;
+
+    /* layout */
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+/* CONTENT STYLING */
+.home_buttons button {
+    /* color */
+    border-color: black;
+    background: goldenrod;
+    
+    /* typography */
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+
+    /* spacing */
+    width: 200px;
+    height: 50px;
+    
+    /* display */
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+/* CONTENT STYLING */
+.home_buttons button:hover {
+    /* color */
+    background-color: rgb(225, 254, 10);
+    box-shadow: 0 0 20px rgb(188, 183, 28);
+
+    /* spacing */
+    position: relative;
+
+    /* display */
+    transition: 0.4s ease;
+    transform: translateY(-2px);
+}
+
+/* CONTENT STYLING */
+.card_visual {
+   /* layout */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* CONTENT STYLING */
+.card_visual img {
+    /* spacing */
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin-left: 60px;
+
+   /* layout */
+   display: block;
+}
+
+/* STATS STYLING */
+.home_page_stats {
+    /* spacing */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    /* display */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* STATS STYLING */
+.cards_stat {
+    /* color */
+    background-color: #0d0f10;
+    
+    /* spacing */
+    padding: 2.25rem 2rem;
+
+    /* display */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 16px;
+    border: 1px solid #2a2e30;
+}
+
+/* STATS STYLING */
+.stat_number {
+    /* color */
+    color: whitesmoke;
+
+    /* typography */
+    font-size: 2.75rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+/* STATS STYLING */
+.stat_label {
+    /* color */
+    color: goldenrod;
+
+    /* typography */
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+/* STATS STYLING */
+.stat_description {
+    /* color */
+    color: #9ca3af69;
+
+    /* typography */
+    font-size: 0.95rem;
+}
+
+/* CONTACTS STYLING */
+.contact_links {
+    /* spacing */
+    padding: 0;
+    margin-top: 1.5rem;
+
+    /* display */
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    cursor: pointer;
+    gap: 0.85rem;
+
+}
+
+/* CONTACTS STYLING */
+.contact_links a, .contact_links li {
+    /* color */
+    color: whitesmoke;
+
+    /* typography */
+    font-size: 1.15rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* REVIEWS STYLING */
+.review_form {
+    /* spacing */
+    margin-top: 1.5rem;
+    max-width: 500px;
+
+    /* display */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* REVIEWS STYLING */
+.review_form input {
+    /* color */
+    background-color: #2a2e30;
+    color: whitesmoke;
+
+    /* typography */
+    font-size: 1rem;
+
+    /* spacing */
+    width: 100%;
+    padding: 0.85rem 1.25rem;
+
+    /* display */
+    border-radius: 12px;
+    border: 1px solid #1a1d1d;
+    outline: none;
+}
+
+/* REVIEWS STYLING */
+#submit_review_button {
+    /* color */
+    background-color: goldenrod;
+    color: black;
+
+    /* typography */
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    /* spacing */
+    padding: 0.85rem 1.25rem;
+    margin-top: 0.5rem;
+
+    /* display */
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+/* REVIEWS STYLING */
+#submit_review_button:hover {
+    background-color: rgb(225, 254, 10);
+    box-shadow: 0 0 15px rgb(188, 183, 28);
+    transform: translateY(-2px);
+}
+
+/* FOOTER STYLING */
+footer {
+    /* color */
+    background-color: #080A0A;
+    color: #9ca3af;
+
+    /* spacing */
+    padding: 4rem 2rem 2rem;
+    margin-top: clamp(5rem, 10vw, 9rem);
+
+    /* display */
+    border-top: 1px solid #1a1d1d;
+}
+
+/* FOOTER STYLING */
+.footer_logo img {
+    /* spacing */
+    width: auto;
+    height: 100px;
+
+    /* display */
+    display: block;
+}
+
+/* FOOTER STYLING */
+.home_page_footer {
+    /* display */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* FOOTER STYLING */
+.footer_grid {
+    /* spacing */
+    padding-bottom: 3.5rem;
+
+    /* display */
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+}
+
+/* FOOTER STYLING */
+.footer_logo {
+    /* color */
+    color: whitesmoke;
+
+    /* typography */
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    /* spacing */
+    margin-bottom: 1rem;
+}
+
+/* FOOTER STYLING */
+.footer_tagline {
+    /* color */
+    color: #9ca3af69;
+
+    /* typography */
+    font-size: 0.85rem;
+    line-height: 1.6;
+
+    /* spacing */
+    margin-bottom: 1.5rem;
+
+    /* display */
+    max-width: 305px;
+}
+
+/* FOOTER STYLING */
+.footer_socials {
+    /* display */
+    display: flex;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+/* FOOTER STYLING */
+.footer_socials a {
+    /* color */
+    background-color: #ffffff47;
+
+    /* spacing */
+    width: 50px;
+    height: 50px;
+
+    /* display */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1a1d1d;
+    border-radius: 6px;
+    transition: 0.4s ease;
+}
+
+/* FOOTER STYLING */
+.footer_socials img {
+    /* spacing */
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    transition: 0.4s ease;
+}
+
+/* FOOTER STYLING */
+.social_profile img.social_profile{
+    filter: invert(0.85);
+}
+
+/* FOOTER STYLING */
+.social_seal img.social_seal{
+    opacity: 0.85;
+}
+
+/* FOOTER STYLING */
+.footer_socials a:hover {
+    /* color */
+    border-color: rgb(188, 183, 28);
+    background-color: rgb(188, 183, 28);
+    box-shadow: 0 0 20px whitesmoke;
+    transform: translateY(-2px);
+}
+
+/* FOOTER STYLING */
+.footer_col h4 {
+    /* color */
+    color: #9ca3af69;
+
+    /* typography */
+    font-size: 0.90rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    /* spacing */
+    margin-bottom: 1.25rem;
+}
+
+/* FOOTER STYLING */
+.footer_col ul {
+    /* display */
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: 0.90rem;
+}
+
+/* FOOTER STYLING */
+.footer_col a {
+    /* color */
+    color: #ffffffbf;
+
+    /* typography */
+    font-size: 0.90rem;
+    text-decoration: none;
+
+    /* display */
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* FOOTER STYLING */
+.footer_col a:after {
+    /* color */
+    background: gold;
+
+    /* spacing */
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+
+    /* display */
+    border-radius: 5px;
+    content: '';
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+/* FOOTER STYLING */
+.footer_col a:hover::after {
+    /* display */
+    transform: scaleX(1);
+}
+
+/* FOOTER STYLING */
+.footer_contacts li {
+    /* color */
+    color: #ffffffbf;
+
+    /* typography */
+    font-size: 0.90rem;
+}
+
+/* FOOTER STYLING */
+.footer_copyright {
+    /* color */
+    color: #9ca3af69;
+
+    /* typography */
+    font-size: 0.90rem;
+
+    /* spacing */
+    padding-top: 1.75rem;
+
+    /* display */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #1a1d1d;
+}
